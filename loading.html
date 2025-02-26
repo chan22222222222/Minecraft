@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loading Screen</title>
+  <!-- Link to shared CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading" class="page">
+    <h1>MINECRAFT</h1>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+
+  <script>
+    // Animate the progress bar from 0% to 100% over ~3 seconds
+    const progress = document.getElementById('progress');
+    let width = 0;
+    const interval = setInterval(() => {
+      if (width >= 100) {
+        clearInterval(interval);
+      } else {
+        width++;
+        progress.style.width = width + '%';
+      }
+    }, 30); // ~3 seconds total
+
+    // After 3 seconds, go to home.html
+    setTimeout(() => {
+      window.location.href = 'home.html';
+    }, 3000);
+  </script>
+</body>
+</html>
