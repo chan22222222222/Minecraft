@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dressing Room</title>
+  <!-- Link to external CSS for dressing page -->
+  <link rel="stylesheet" href="dressing.css">
+</head>
+<body>
+
+  <!-- Top bar: "Dressing Room" text, coin indicator -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <!-- Optional "Back" button to go home -->
+      <button class="back-btn" onclick="window.location.href='home.html'">&lt;</button>
+      <span class="top-bar-title">Dressing Room</span>
+    </div>
+    <div class="top-bar-right">
+      <!-- Example coin icon and amount -->
+      <img src="https://via.placeholder.com/24?text=$" alt="Coins" class="coin-icon">
+      <span class="coin-amount">0</span>
+    </div>
+  </header>
+
+  <!-- Main container: left panel + main area -->
+  <div class="dressing-container">
+
+    <!-- Left panel with icons (placeholder images) -->
+    <nav class="left-panel">
+      <div class="panel-icon">
+        <img src="mm.jpg" alt="Icon 1">
+      </div>
+      <div class="panel-icon">
+        <img src="nn.jpg" alt="Icon 2">
+      </div>
+      <div class="panel-icon">
+        <img src="bb.jpg" alt="Icon 3">
+      </div>
+      <!-- Add more icons if needed -->
+    </nav>
+
+    <!-- Main area with characters -->
+    <section class="main-area">
+
+      <!-- Character selector row -->
+      <div class="character-selector">
+        <button class="arrow-btn">&lt;</button>
+
+        <div class="character-slot">
+          <img src="1234.jpg" alt="Steve">
+        </div>
+        <div class="character-slot">
+          <img src="1234.jpg" alt="Alex">
+        </div>
+        <div class="character-slot">
+          <img src="1234.jpg" alt="Custom">
+        </div>
+
+        <button class="arrow-btn">&gt;</button>
+      </div>
+
+      <!-- Current character info -->
+      <div class="character-info">
+        <span>This is your current Character</span>
+        <div class="character-buttons">
+          <button>Edit Character</button>
+          <button>Delete</button>
+        </div>
+      </div>
+
+      <!-- Featured items row -->
+      <div class="featured-items">
+        <h3>FEATURED ITEMS</h3>
+        <div class="items-row">
+          <!-- 5 images: hh.jpg, gg.jpg, ff.jpg, dd.jpg, ss.jpg -->
+          <div class="item-card">
+            <img src="hh.jpg" alt="Item 1">
+          </div>
+          <div class="item-card">
+            <img src="gg.jpg" alt="Item 2">
+          </div>
+          <div class="item-card">
+            <img src="ff.jpg" alt="Item 3">
+          </div>
+          <div class="item-card">
+            <img src="dd.jpg" alt="Item 4">
+          </div>
+          <div class="item-card">
+            <img src="ss.jpg" alt="Item 5">
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div><!-- .dressing-container -->
+
+</body>
+</html>

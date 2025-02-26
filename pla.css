@@ -1,0 +1,190 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  
+  /* Top bar with the 3 tabs: Worlds, Friends, Servers */
+  .play-header {
+    background-color: #dddddd;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .play-tab {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1em;
+    padding: 0 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  .play-tab.active,
+  .play-tab:hover {
+    background-color: #aaa;
+  }
+  
+  /* Main container for the tab contents */
+  .play-container {
+    padding: 10px;
+  }
+  
+  /* Each tab content area. We show/hide them via JS. */
+  .play-content {
+    display: none; /* hidden by default */
+  }
+  .play-content.active {
+    display: block; /* show when active */
+  }
+  
+  /* WORLDS TAB */
+  .worlds-container {
+    background-color: #333;
+    padding: 10px;
+  }
+  .create-btn, .realms-btn {
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .realms-btn {
+    background-color: purple; /* or #6c2eb9 for a more "Minecraft purple" look */
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .world-item {
+    background-color: #444;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .world-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .world-name {
+    font-weight: bold;
+  }
+  .world-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .edit-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* FRIENDS TAB */
+  .friends-container {
+    background-color: #333;
+    padding: 10px;
+  }
+  .friends-actions {
+    margin-bottom: 10px;
+  }
+  .friends-actions button {
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .friends-info p {
+    margin-bottom: 5px;
+  }
+  
+  /* SERVERS TAB */
+  .servers-container {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    gap: 10px;
+  }
+  /* Left list of servers */
+  .servers-list {
+    width: 200px;
+    background-color: #444;
+    padding: 10px;
+  }
+  .server-item {
+    background-color: #555;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .server-name {
+    font-weight: bold;
+  }
+  .server-extra {
+    font-size: 0.9em;
+    color: #ccc;
+  }
+  .server-quickjoin {
+    margin-top: 5px;
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Right server detail panel */
+  .server-detail {
+    flex: 1;
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .server-preview {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .join-server-btn {
+    margin-top: 10px;
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Top bar for the "Play" page */
+.play-top-bar {
+    background-color: #dddddd;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+  }
+  
+  /* Back button on the left side */
+  .back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+    margin-right: 10px;
+  }
+  
+  /* Centered "Play" title */
+  .play-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+  }
+  

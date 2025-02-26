@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Play</title>
+  <!-- Link to external CSS (pla.css) or merge with your existing styles -->
+  <link rel="stylesheet" href="pla.css">
+</head>
+<body>
+
+<!-- Top bar with a back arrow and "Play" title -->
+<div class="play-top-bar">
+  <!-- Back button that returns to home.html -->
+  <button class="back-btn" onclick="window.location.href='home.html'">&lt;</button>
+  <span class="play-title"></span>
+</div>
+
+<!-- Tabs: Worlds, Friends, Servers -->
+<div class="play-header">
+  <button class="play-tab active" data-tab="worlds">Worlds (1)</button>
+  <button class="play-tab" data-tab="friends">Friends (0)</button>
+  <button class="play-tab" data-tab="servers">Servers (8)</button>
+</div>
+
+<!-- Main container for tab contents -->
+<div class="play-container">
+
+  <!-- WORLDS TAB -->
+  <div id="worlds" class="play-content active">
+    <div class="worlds-container">
+      <button class="create-btn">Create New</button>
+      <button class="realms-btn">Create on Realms Server</button>
+
+      <div class="world-item">
+        <div class="world-info">
+          <span class="world-name">My World</span>
+          <span class="world-type">Creative</span>
+        </div>
+        <div class="world-meta">
+          <span class="world-date">02/26/25</span>
+          <span class="world-size">3.2MB</span>
+          <img src="pencil.png" alt="Edit" class="edit-icon">
+        </div>
+      </div>
+      <!-- Add more world items as needed -->
+    </div>
+  </div>
+
+  <!-- FRIENDS TAB -->
+  <div id="friends" class="play-content">
+    <div class="friends-container">
+      <div class="friends-actions">
+        <button>Add Friend</button>
+        <button>Join Realm</button>
+      </div>
+      <div class="friends-info">
+        <p><strong>Joinable Realms</strong></p>
+        <p>You have not become a member of any Realms yet.</p>
+        <br>
+        <p><strong>Joinable Friends</strong></p>
+        <p>Your friends are not playing Minecraft right now.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVERS TAB -->
+  <div id="servers" class="play-content">
+    <div class="servers-container">
+      <!-- Left: featured servers list -->
+      <div class="servers-list">
+        <div class="server-item">
+          <span class="server-name">Lifeboat</span>
+          <span class="server-extra">JP/Bedwars</span>
+          <button class="server-quickjoin">NEW GAME!</button>
+        </div>
+        <div class="server-item">
+          <span class="server-name">CubeCraft</span>
+        </div>
+        <div class="server-item">
+          <span class="server-name">Mineville</span>
+          <span class="server-extra">DINOSAUR PRISON</span>
+        </div>
+        <div class="server-item">
+          <span class="server-name">GALAXITE</span>
+        </div>
+      </div>
+
+      <!-- Right: server detail panel -->
+      <div class="server-detail">
+        <img src="bed_preview.jpg" alt="Server Preview" class="server-preview">
+        <h4>Lifeboat</h4>
+        <p>Online: 3,181</p>
+        <p>Current Ping: 146</p>
+        <button class="join-server-btn">Join Server</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- .play-container -->
+
+<!-- Small JS to handle tab switching -->
+<script>
+  const tabs = document.querySelectorAll('.play-tab');
+  const contents = document.querySelectorAll('.play-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      // Hide all content
+      contents.forEach(c => c.classList.remove('active'));
+
+      // Activate the clicked tab
+      tab.classList.add('active');
+      // Show the corresponding content
+      const target = tab.getAttribute('data-tab');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

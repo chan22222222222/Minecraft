@@ -1,0 +1,153 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #2b2b2b; /* Dark background */
+    color: #fff;
+  }
+  
+  /* Top bar (Dressing Room title, coins) */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dddddd; /* Light gray */
+    height: 50px;
+    padding: 0 10px;
+    color: #000; /* text color for top bar */
+  }
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+  }
+  .top-bar-title {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  .back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #000;
+    margin-right: 5px;
+  }
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+  }
+  .coin-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+  .coin-amount {
+    font-size: 1em;
+  }
+  
+  /* Main container */
+  .dressing-container {
+    display: flex;
+    height: calc(100vh - 50px); /* Fill the screen minus the top bar */
+  }
+  
+  /* Left panel with icons */
+  .left-panel {
+    width: 60px;
+    background-color: #3a3a3a;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Main area (characters + featured items) */
+  .main-area {
+    flex: 1;
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Character selector (arrows + slots) */
+  .character-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .arrow-btn {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .arrow-btn:hover {
+    background-color: #666;
+  }
+  .character-slot {
+    margin: 0 5px;
+  }
+  .character-slot img {
+    border: 2px solid #999;
+    background-color: #333;
+  }
+  
+  /* Current character info */
+  .character-info {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .character-buttons {
+    margin-top: 5px;
+  }
+  .character-buttons button {
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .character-buttons button:hover {
+    background-color: #888;
+  }
+  
+  /* Featured items row */
+  .featured-items {
+    width: 100%;
+    margin-top: auto; /* push it toward the bottom if you like */
+  }
+  .featured-items h3 {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .items-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* allow horizontal scrolling if many items */
+    padding-bottom: 10px;
+  }
+  .item-card {
+    min-width: 80px;
+    background-color: #2f2f2f;
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0; /* keep items from shrinking */
+  }
+  

@@ -1,0 +1,135 @@
+/* Basic reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #2b2b2b; /* Dark gray background */
+    color: #fff;
+  }
+  
+  /* Top bar with a back arrow and "PROFILE" */
+  header {
+    background-color: #eeeeee; /* Light gray bar */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative; /* So we can position the arrow & title inside */
+  }
+  
+  /* Back arrow button on the left */
+  .back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  /* Centered "PROFILE" text */
+  .header-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Container for the entire profile layout */
+  .profile-container {
+    display: flex; /* Left panel + main content side by side */
+    min-height: calc(100vh - 50px); /* fill the rest of the page below header */
+  }
+  
+  /* Left panel with user info */
+  .left-panel {
+    width: 250px;
+    background-color: #333333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-panel img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    margin-bottom: 15px;
+  }
+  .username {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .dressing-room-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #666666;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #999999;
+    cursor: pointer;
+  }
+  .dressing-room-btn:hover {
+    background-color: #888888;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex: 1;
+    background-color: #1f1f1f;
+    padding: 20px;
+  }
+  
+  /* Tab navigation (Overview, Stats) */
+  .tab-nav {
+    display: flex;
+    border-bottom: 1px solid #444444;
+    margin-bottom: 15px;
+  }
+  .tab-nav button {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  .tab-nav button.active,
+  .tab-nav button:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+  
+  /* Tab content sections */
+  .tab-content {
+    display: none; /* hidden by default */
+  }
+  .tab-content.active {
+    display: block; /* show when active */
+  }
+  
+  /* Example styling for the items in the overview/stats lists */
+  .list-item {
+    background-color: #2f2f2f;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #444444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .item-title {
+    font-weight: bold;
+  }
+  .item-value {
+    color: #ccc;
+  }
+  

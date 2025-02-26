@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Settings</title>
+  <!-- Link to external CSS for settings page -->
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+<!-- Top bar: "Settings" + back arrow -->
+<header class="settings-header">
+  <button class="back-btn" onclick="window.location.href='home.html'">&lt;</button>
+  <span class="settings-title">Settings</span>
+</header>
+
+<!-- Main container: left panel (categories) + right panel (content) -->
+<div class="settings-container">
+
+  <!-- Left panel with categories -->
+  <nav class="settings-nav">
+    <button class="nav-item active" data-tab="accessibility">Accessibility</button>
+    <button class="nav-item" data-tab="general">General</button>
+    <button class="nav-item" data-tab="video">Video</button>
+    <button class="nav-item" data-tab="audio">Audio</button>
+    <button class="nav-item" data-tab="account">Account</button>
+    <button class="nav-item" data-tab="subscriptions">Subscriptions</button>
+    <button class="nav-item" data-tab="resources">Global Resources</button>
+    <button class="nav-item" data-tab="storage">Storage</button>
+    <button class="nav-item" data-tab="language">Language</button>
+    <button class="nav-item" data-tab="creator">Creator</button>
+    <!-- Add or remove categories as needed -->
+  </nav>
+
+  <!-- Right panel with the content for each category -->
+  <section class="settings-content">
+
+    <!-- Accessibility Settings (default visible) -->
+    <div id="accessibility" class="settings-panel active">
+      <h2>Accessibility Settings</h2>
+
+      <!-- Example: Chat message duration dropdown -->
+      <div class="setting-row">
+        <label for="chatDuration">Chat message duration</label>
+        <select id="chatDuration">
+          <option>3 seconds (default)</option>
+          <option>10 seconds (default)</option>
+          <option>30 seconds</option>
+        </select>
+      </div>
+
+      <!-- Example: GUI scale slider -->
+      <div class="setting-row">
+        <label>GUI Scale Modifier: <span id="guiScaleValue">0</span></label>
+        <input 
+          type="range" 
+          id="guiScale" 
+          min="0" 
+          max="10" 
+          value="0" 
+          oninput="document.getElementById('guiScaleValue').textContent=this.value"
+        >
+      </div>
+
+      <!-- Example: Extra Large New UI toggle -->
+      <div class="setting-row">
+        <label for="extraLargeUI">Extra Large New UI</label>
+        <input type="checkbox" id="extraLargeUI">
+      </div>
+
+      <!-- Example: Reset button -->
+      <div class="setting-row">
+        <button class="reset-btn">Reset to Default</button>
+      </div>
+    </div>
+
+    <!-- General Settings -->
+    <div id="general" class="settings-panel">
+      <h2>General Settings</h2>
+      <!-- Add content or placeholders for General here -->
+      <p>General settings placeholder...</p>
+    </div>
+
+    <!-- Video Settings -->
+    <div id="video" class="settings-panel">
+      <h2>Video Settings</h2>
+      <!-- Add content or placeholders for Video here -->
+      <p>Video settings placeholder...</p>
+    </div>
+
+    <!-- Audio Settings -->
+    <div id="audio" class="settings-panel">
+      <h2>Audio Settings</h2>
+      <!-- Add content or placeholders for Audio here -->
+      <p>Audio settings placeholder...</p>
+    </div>
+
+    <!-- Account Settings -->
+    <div id="account" class="settings-panel">
+      <h2>Account Settings</h2>
+      <p>Account settings placeholder...</p>
+    </div>
+
+    <!-- Subscriptions -->
+    <div id="subscriptions" class="settings-panel">
+      <h2>Subscriptions</h2>
+      <p>Subscriptions placeholder...</p>
+    </div>
+
+    <!-- Global Resources -->
+    <div id="resources" class="settings-panel">
+      <h2>Global Resources</h2>
+      <p>Resources placeholder...</p>
+    </div>
+
+    <!-- Storage -->
+    <div id="storage" class="settings-panel">
+      <h2>Storage</h2>
+      <p>Storage placeholder...</p>
+    </div>
+
+    <!-- Language -->
+    <div id="language" class="settings-panel">
+      <h2>Language</h2>
+      <p>Language placeholder...</p>
+    </div>
+
+    <!-- Creator -->
+    <div id="creator" class="settings-panel">
+      <h2>Creator</h2>
+      <p>Creator settings placeholder...</p>
+    </div>
+
+  </section>
+</div><!-- .settings-container -->
+
+<!-- Small JS to handle tab switching -->
+<script>
+  const navItems = document.querySelectorAll('.nav-item');
+  const panels = document.querySelectorAll('.settings-panel');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove "active" from all nav items
+      navItems.forEach(i => i.classList.remove('active'));
+      // Hide all panels
+      panels.forEach(p => p.classList.remove('active'));
+
+      // Activate the clicked nav item
+      item.classList.add('active');
+      // Show the corresponding panel
+      const target = item.getAttribute('data-tab');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

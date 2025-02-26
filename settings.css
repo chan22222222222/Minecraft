@@ -1,0 +1,108 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #2b2b2b; /* Dark gray background */
+    color: #fff;
+  }
+  
+  /* Top header bar */
+  .settings-header {
+    background-color: #dddddd;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+    color: #000;
+  }
+  .back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+    margin-right: 10px;
+  }
+  .settings-title {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  /* Main container: left nav + right content */
+  .settings-container {
+    display: flex;
+    height: calc(100vh - 50px); /* Fill the screen below the header */
+  }
+  
+  /* Left panel (categories) */
+  .settings-nav {
+    width: 250px;
+    background-color: #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .nav-item {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 10px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  .nav-item:hover {
+    background-color: #555;
+  }
+  .nav-item.active {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  /* Right panel (content) */
+  .settings-content {
+    flex: 1;
+    background-color: #1f1f1f;
+    padding: 20px;
+    overflow-y: auto; /* scroll if needed */
+  }
+  
+  /* Each panel is hidden by default, shown when .active */
+  .settings-panel {
+    display: none;
+  }
+  .settings-panel.active {
+    display: block;
+  }
+  
+  /* Example styling for setting rows */
+  .setting-row {
+    margin-bottom: 15px;
+  }
+  .setting-row label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .setting-row select,
+  .setting-row input[type="checkbox"],
+  .setting-row input[type="range"] {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  .reset-btn {
+    background-color: #666;
+    border: 1px solid #999;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .reset-btn:hover {
+    background-color: #888;
+  }
+  
