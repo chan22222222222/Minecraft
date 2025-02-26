@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Home</title>
+  <!-- Link to shared CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Home Screen -->
+  <div id="home" class="page">
+
+    <!-- Video background -->
+    <video id="bgVideo" autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Optional background music -->
+    <audio id="bgMusic" loop>
+      <source src="minecraft_music.mp3" type="audio/mpeg">
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <div class="title-wrapper">
+      <div class="minecraft-title">MINECRAFT</div>
+      <div class="subtitle">afraid of the big black bat</div>
+    </div>
+
+    <div class="menu-buttons">
+        <button onclick="window.location.href='pla.html'">Play</button>
+        <button onclick="window.location.href='settings.html'">Settings</button>
+      <button>Realms</button>
+    </div>
+
+    <!-- Footer with Profile, Marketplace, Dressing Room -->
+    <div class="footer">
+      <!-- Example link to profile.html -->
+      <button onclick="window.location.href='profile.html'">Profile</button>
+      <button>Marketplace</button>
+    <!-- "Dressing Room" button in home.html -->
+<button onclick="window.location.href='dressing.html'">Dressing Room</button>
+
+    </div>
+
+    <div class="version">v1.21.61</div>
+    <div class="mojang">©Mojang AB</div>
+  </div>
+
+  <!-- Script for optionally auto-playing music -->
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    // Attempt to play music. Might be blocked until user interaction.
+    bgMusic.play().catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
+  </script>
+</body>
+</html>
