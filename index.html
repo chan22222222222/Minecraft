@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft-Style Startup</title>
+  <!-- Link to the external CSS for index/home page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Splash Screen -->
+  <div id="splash" class="page">
+    STUDIOS
+  </div>
+
+  <!-- 2. Loading Screen -->
+  <div id="loading" class="page">
+    <h1>MINECRAFT</h1>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+
+  <!-- 3. Home Screen (video background + optional music) -->
+  <div id="home" class="page">
+
+    <!-- Video element for the background -->
+    <video 
+      id="bgVideo" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+    >
+      <source src="background.mp4" type="video/mp4">
+      <!-- Fallback message if browser doesn't support HTML5 video -->
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Audio element for optional background music -->
+    <audio id="bgMusic" loop>
+      <source src="minecraft_music.mp3" type="audio/mpeg">
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <div class="title-wrapper">
+      <div class="minecraft-title">MINECRAFT</div>
+      <div class="subtitle">afraid of the big black bat</div>
+    </div>
+
+    <div class="menu-buttons">
+      <button>Play</button>
+      <button>Settings</button>
+      <button>Realms</button>
+    </div>
+
+    <!-- Footer with three buttons: 
+         1) Profile (links to profile.html), 
+         2) Marketplace, 
+         3) Dressing Room -->
+    <div class="footer">
+      <!-- LINK to profile.html -->
+      <button onclick="window.location.href='profile.html'">Profile</button>
+      <button>Marketplace</button>
+      <button>Dressing Room</button>
+    </div>
+
+    <div class="version">v1.21.61</div>
+    <div class="mojang">©Mojang AB</div>
+  </div>
+
+  <!-- Link to the external JS for index/home page -->
+  <script src="script.js"></script>
+</body>
+</html>
